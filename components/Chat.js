@@ -21,7 +21,7 @@ export default class Chat extends Component {
         Fire.shared.off()
     }
 
-    get user() {  // Return our name and our UID for GiftedChat to parse
+    get user() { 
         return {
           _id: Fire.shared.uid,
         };

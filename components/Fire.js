@@ -1,4 +1,4 @@
-import firebase from 'firebase'; // 4.8.1
+import firebase from 'firebase'; 
 
 class Fire {
   constructor() {
@@ -58,7 +58,7 @@ class Fire {
   get timestamp() {
     return firebase.database.ServerValue.TIMESTAMP;
   }
-  // send the message to the Backend
+  
   send = messages => {
     for (let i = 0; i < messages.length; i++) {
       const { text, user } = messages[i];
@@ -73,7 +73,7 @@ class Fire {
 
   append = message => this.ref.push(message);
 
-  // close the connection to the Backend
+
   off() {
     this.ref.off();
   }
